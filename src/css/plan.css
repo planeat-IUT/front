@@ -1,0 +1,10 @@
+.card-cont-plan{
+    position : absolute;
+    z-index: 3;
+    display: flex;
+    height: calc(90vh - 50px);
+    width: 400px;
+    right: 30px;
+    background: aliceblue;
+    border-radius : 10px;
+}
