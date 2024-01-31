@@ -1,4 +1,4 @@
-import CardRestaurant from "../Components/CardRestaurant";
+import CardRestaurant from "../Components/RestaurantComponents/CardRestaurant";
 
 export default function Home() {
     return (
