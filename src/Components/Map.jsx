@@ -12,6 +12,12 @@ export default function Map({position, zoom, restaurants, Clicked}) {
         iconSize : [48, 48],
     });
 
+    useEffect(() => {
+        console.log(position)
+        console.log('lat : ' + position[0]);
+        console.log('long : ' + position[1]);
+    })
+
     return (
         <div>
             <MapContainer center={[position[0], position[1]]} zoom={zoom} >

@@ -13,10 +13,11 @@ export default function Plan() {
     useEffect( () => {
         if(load) return;
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                setPosition([position.coords.latitude, position.coords.longitude]);
+            navigator.geolocation.getCurrentPosition((positionRes) => {
+                setPosition([positionRes.coords.latitude, positionRes.coords.longitude]);
                 setLoad(true);
-                console.log(`position : ${position.coords.latitude}, ${position.coords.longitude}`);
+                console.log(`position : ${position[0]}, ${position[1]}`);
+                console.log('position ' + position)
             });
         }
     });
