@@ -1,0 +1,132 @@
+.cont-restaurant{
+    position: absolute;
+    top: 0;
+    padding-top: 60px;
+    height: calc(100% - 60px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: white;
+}
+
+.cont-card-restaurant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cont-card-restau{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 15px;
+    height: 180px;
+    width: 480px;
+    margin: 10px;
+    margin-bottom: 35px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 200px;
+}
+
+.cont-utils-card-restau{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.img-card-restau{
+    margin-right: 15px;
+    width: 160px;
+    border-radius: 5px;
+    background: white;
+    object-fit: contain;
+}
+
+.img-card-restau img{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px 13px 3px 13px;
+}
+
+
+.title-txt-card-restau{
+    margin-bottom: 5px;
+}
+
+.desc-card-restau{
+    font-size: 13px;
+    color: #534B35;
+}
+
+.txt-card-restau{
+    display: flex;
+    flex-direction: column;
+    flex : 1;
+}
+
+.control-card-restau{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px;
+    align-items: end;
+}
+.note-control-card-restau{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-control-card-restau .note{
+    position: relative;
+    z-index: 2;
+    width: 21px;
+    right: -27px;
+    display: flex;
+    justify-content: center;
+    color: #534B35;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 350;
+    top: 2px;
+}
+
+.note-control-card-restau textPath{
+    text-anchor: middle;
+}
+
+.btn-card-restau{
+    margin-bottom: 5px;
+}
+
+.main-cont-filter {
+    background: #534B35;
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    margin-left: 20px;
+    padding: 10px;
+    color : white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cont-check-filter{
+    margin: 20px 10px 20px 10px;
+    width: 85%;
+}
+
+.title-cont-filter{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    width: 80%;
+}

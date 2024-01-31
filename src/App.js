@@ -1,7 +1,7 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './App.css';
 import './css/header.css';
-import './css/restaiurants.css';
+import './css/restaurants.css';
 import './css/plan.css';
 import './css/map.css';
 import Home from './Page/Home';
@@ -44,12 +44,7 @@ function App() {
 
   return (
       <>
-        <Header links={[
-            {url : "/", name: "Accueil"},
-            {url : "/plan", name: "Plan"},
-            {url : "/restaurants", name: "Restaurants"},
-            {url : "/about", name: "About"},
-          ]}/>
+
         <RouterProvider router={router} />
       </>
   );

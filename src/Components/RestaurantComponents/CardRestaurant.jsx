@@ -1,7 +1,22 @@
-import imgsRestaurant from '../img/restaurant.jpg'
+import imgsRestaurant from '../../img/restaurant.jpg'
+import {useState} from "react";
 
-export default function CardRestaurant({restaurant}) {
+export default function CardRestaurant({restaurant = []}) {
+
+    const [fav , setFav] = useState(false);
+    const [heartColor , setHeartColor] = useState('#F1F1F1');
+
+    const changeColor = () => {
+        setFav(!fav);
+        if(fav){
+            setHeartColor('#F1F1F1');
+        }else{
+            setHeartColor('#F89B9B');
+        }
+    }
+
     return(
+
         <div class="cont-card-restau">
             <div class="img-card-restau">
                 <img src={imgsRestaurant} alt="" />
@@ -10,15 +25,15 @@ export default function CardRestaurant({restaurant}) {
                 <div class="cont-utils-card-restau">
                     <div class="txt-card-restau">
                         <span class="title-txt-card-restau">
-                            {restaurant.name}
+                            {restaurant.NOM}
                         </span>
-                        <span>
-                            {restaurant.desc}
+                        <span className={"desc-card-restau"}>
+                            {restaurant.DESCRIPTION}
                         </span>
                     </div>
-                    <div>
-                        <button class="btn-card-restau">
-                            <span class="txt-btn-card-restau">
+                    <div className={"btn-card-restau"}>
+                        <button className={"btn-card-restau"}>
+                            <span className={"txt-btn-card-restau"}>
                                 Réserver
                             </span>
                         </button>
@@ -30,14 +45,14 @@ export default function CardRestaurant({restaurant}) {
                     </div>
                 </div>
                 <div class="control-card-restau">
-                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="7.60976" cy="7.92683" rx="7.60976" ry="7.92683" fill="#F89B9B"/>
-                        <ellipse cx="18.3902" cy="7.92683" rx="7.60976" ry="7.92683" fill="#F89B9B"/>
-                        <path d="M25.989 8.31745C26.3826 13.7267 16.0744 23.4634 12.8607 23.4634C9.64703 23.4634 -0.382328 13.5464 0.0112661 8.31745C0.0112661 4.05265 9.64703 8.01916 12.8607 8.01916C16.0744 8.01916 25.989 4.05265 25.989 8.31745Z" fill="#F89B9B"/>
+                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => changeColor()}>
+                        <ellipse cx="7.60976" cy="7.92683" rx="7.60976" ry="7.92683" fill={heartColor}/>
+                        <ellipse cx="18.3902" cy="7.92683" rx="7.60976" ry="7.92683" fill={heartColor}/>
+                        <path d="M25.989 8.31745C26.3826 13.7267 16.0744 23.4634 12.8607 23.4634C9.64703 23.4634 -0.382328 13.5464 0.0112661 8.31745C0.0112661 4.05265 9.64703 8.01916 12.8607 8.01916C16.0744 8.01916 25.989 4.05265 25.989 8.31745Z" fill={heartColor}/>
                     </svg>
                     <div class="note-control-card-restau">
                         <span class="note">
-                            {restaurant.note}
+                            {restaurant.NOTE}
                         </span>
                         <svg width="32" height="35" viewBox="0 0 32 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse cx="10.7907" cy="16.0697" rx="10.7907" ry="9.67442" fill="#F1F1F1"/>
