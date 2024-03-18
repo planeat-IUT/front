@@ -1,0 +1,151 @@
+.header {
+    background-color: white;
+    height: 45px;
+    padding: 5px;
+    border-radius: 10px;
+    flex: 1;
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    left: 10px;
+    right: 10px ;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-size: 15px;
+}
+
+.div-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-menu{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    /* flex: 1; */
+    align-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.header-lien{
+    color: #534B35;
+    font-family: 'Inter', serif;
+    font-style: italic;
+    text-decoration: none;
+    margin: 0 25px;
+}
+
+.header-login{
+    color: #534B35;
+    font-family: 'Inter', serif;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.div-logo-link{
+    margin-left: 8px;
+    justify-content: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    left: 4px;
+}
+
+.div-link{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+}
+
+.div-search-login{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+    height: 45px;
+}
+
+.div-search{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 67%;
+}
+
+.input-search{
+    background-color: white;
+    width: 5%;
+    height: 25px;
+    border: none;
+    border-radius: 25%;
+    transition: 0.5s;
+}
+
+.div-login{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 40%;
+    color: #534B35;
+    font-family: 'Inter', serif;
+    font-style: italic;
+}
+
+.div-logo{
+    display: flex;
+    align-content: center;
+    color: #534B35;
+    height: 45px;
+    font-size: 26px;
+}
+
+svg{
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.liste-header{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-search:hover > input{
+    width: 80%;
+    transition: width 0.5s;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+}
+
+.div-search input:focus{
+    width: 80%;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+}
+
+.div-search input:focus{
+    width: 80%;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+}
+
+.liste-header:hover{
+    background-color: #9CF196;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.liste-header:hover > a {
+    color: white;
+}

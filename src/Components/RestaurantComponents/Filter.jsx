@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 export default function Filter({checkFilter = [], typeButtons = [], checkDistance = []}){
 
     const [checkedRadio, setCheckedRadion] = useState();
+    const [distance, setDistance] = useState();
 
     return (
         <>
@@ -60,15 +61,30 @@ export default function Filter({checkFilter = [], typeButtons = [], checkDistanc
                             Distance
                         </span>
                     </div>
-                    <div className={"input-check-filter-cont"}>
-                        {checkDistance.map((type, index) => (
-                            <div>
-                                <input key={index} type={"radio"} className={"check-filter"}/>
-                                <label>
-                                    {type}
-                                </label>
+                    <div className={"input-check-filter-cont input-check-filter-cont-dist"}>
+                        {checkDistance.map((dist, index) => (
+                            <div className={"radio-dist"}>
+                                <input key={index}
+                                       type={"radio"}
+                                       className={"check-filter"}
+                                       value={dist} checked={distance === dist}
+                                       onClick={() => setDistance(dist)}
+                                />
+                                {index !== checkDistance.length - 1 &&
+                                    <div className={"line-dist"}></div>
+                                }
                             </div>
                         ))}
+                    </div>
+                    <div className={"radio-dist-span-list"}>
+                        {checkDistance.map((dist, index) => (
+                            <div className={"radio-dist-span"}>
+                                    <span>
+                                        {dist} km
+                                    </span>
+                                </div>
+                            )
+                        )}
                     </div>
                 </div>
                 }

@@ -44,7 +44,13 @@ function App() {
 
   return (
       <>
-
+        <Header links={[
+          {url : "/", name: "Accueil"},
+          {url : "/plan", name: "Plan"},
+          {url : "/restaurants", name: "Restaurants"},
+          {url : "/about", name: "About"},
+          {url : "/restaurant", name: "AboutRestaurant"}
+        ]}/>
         <RouterProvider router={router} />
       </>
   );
