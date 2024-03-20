@@ -83,10 +83,11 @@
 .input-search{
     background-color: white;
     width: 5%;
-    height: 25px;
+    height: 10px;
     border: none;
     border-radius: 25%;
     transition: 0.5s;
+    padding: 10px;
 }
 
 .div-login{
@@ -126,12 +127,14 @@ svg{
     transition: width 0.5s;
     background-color: #F1F1F1;
     border-radius: 15px;
+    margin-right: 25px;
 }
 
 .div-search input:focus{
     width: 80%;
     background-color: #F1F1F1;
     border-radius: 15px;
+    margin-right: 25px;
 }
 
 .div-search input:focus{
