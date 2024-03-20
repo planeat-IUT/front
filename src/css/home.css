@@ -1,0 +1,30 @@
+.cont-main-home{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.first-page-home{
+    height: 100vh;
+    background: #534B35;
+}
+
+.big-apple-home{
+    position: absolute;
+    left: -20px;
+    top: -5px;
+}
+
+.little-apple-home{
+    height: min-content;
+    width: min-content;
+    position: absolute;
+    right: -5px;
+}
+
+.little-mid-apple-home{
+    height: min-content;
+    width: min-content;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+}

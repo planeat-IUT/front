@@ -4,6 +4,7 @@ import './css/header.css';
 import './css/restaurants.css';
 import './css/plan.css';
 import './css/map.css';
+import './css/home.css';
 import Home from './Page/Home';
 import Plan from './Page/Plan';
 import Restaurants from './Page/Restaurants';
