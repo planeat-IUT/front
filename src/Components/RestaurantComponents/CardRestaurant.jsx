@@ -1,4 +1,4 @@
-import imgsRestaurant from '../../img/restaurant.jpg'
+import imgsRestaurant from '../../img/restaurant.jpg';
 import {useState} from "react";
 
 export default function CardRestaurant({restaurant = []}) {
@@ -32,13 +32,14 @@ export default function CardRestaurant({restaurant = []}) {
                         </span>
                     </div>
                     <div className={"btn-card-restau"}>
-                        <button className={"btn-card-restau"}>
+                        <button className={"btn-card-restau"}
+                                onClick={() => window.location.href = `/Réservation/${restaurant.NOM}`}>
                             <span className={"txt-btn-card-restau"}>
                                 Réserver
                             </span>
                         </button>
                         <button>
-                            <span class="txt-btn-card-restau">
+                            <span className={"txt-btn-card-restau"}>
                                 Click'n Collect
                             </span>
                         </button>

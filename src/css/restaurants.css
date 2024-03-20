@@ -13,8 +13,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    flex: 1;
+    flex: 1 1;
     overflow-y: auto;
+    margin-left: 210px;
+    margin-top: 10px;
 }
 
 .cont-card-restau{
@@ -22,12 +24,11 @@
     flex-direction: row;
     background: white;
     border-radius: 15px;
-    height: 180px;
+    height: 190px;
     width: 480px;
     margin: 10px;
     margin-bottom: 35px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    height: 200px;
 }
 
 .cont-utils-card-restau{
@@ -49,6 +50,7 @@
     height: 100%;
     width: 100%;
     border-radius: 3px 13px 3px 13px;
+    object-fit: cover;
 }
 
 
@@ -68,13 +70,14 @@
 }
 
 .control-card-restau{
-    margin-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 13px;
     align-items: end;
+    width: 40px;
 }
+
 .note-control-card-restau{
     display: flex;
     align-items: center;
@@ -110,11 +113,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: calc(100% - 30px);
-    margin-left: 20px;
+    margin-left: 10px;
     padding: 10px;
-    color : white;
+    color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    flex: 1;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 10px;
+    top: 70px;
+    height: calc(100% - 95px);
 }
 .cont-check-filter{
     margin: 20px 10px 20px 10px;
@@ -165,4 +173,26 @@
     z-index: 3;
     right: -10px;
     left: 5px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lightgrey;
+    opacity: 0.5;
+    width: 11px;
 }

@@ -11,6 +11,7 @@ import About from './Page/About';
 import Login from './Page/Login';
 import Account from './Page/Account';
 import Header from "./Components/Header";
+import Reservation from "./Page/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/Account",
     element: <Account />,
+  },
+  {
+    path: "/Réservation/*",
+    element: <Reservation />,
   }
   ]);
 
@@ -49,7 +54,6 @@ function App() {
           {url : "/plan", name: "Plan"},
           {url : "/restaurants", name: "Restaurants"},
           {url : "/about", name: "About"},
-          {url : "/restaurant", name: "AboutRestaurant"}
         ]}/>
         <RouterProvider router={router} />
       </>
