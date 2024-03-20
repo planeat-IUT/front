@@ -42,7 +42,7 @@ export default function Header({links}) {
                     <div className="div-link">
                         <ul className="header-menu">
                             {links.map((link, index) => (
-                                <li key={index} className="liste-header" onClick={Navigation(link.url)}>
+                                <li key={index} className="liste-header" onClick={Navigation()}>
                                     <a className="header-lien" href={link.url}>{link.name}</a>
                                 </li>
                             ))}
