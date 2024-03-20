@@ -1,7 +1,7 @@
 
 export default function Header({links}) {
 
-    const Navigation = (link) => {
+    const Navigation = () => {
 
     };
 
