@@ -1,0 +1,40 @@
+.NamePlan{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 150px;
+    margin-left: 20px;
+    padding: 25px;
+    background-color: #FFFEEC;
+    border-radius: 5px;
+}
+
+.NamePlan-imgRestaurant{
+    height: 250px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.NamePlan-divPlan{
+    font-size: 18px;
+    font-family: 'Inter';
+}
+
+.NamePlan-plan{
+    height: 250px;
+    width: 350px;
+}
+
+.NamePlan-btnPlan{
+    width: 350px;
+    height: 30px;
+    font-family: 'Inter';
+    font-size: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #534B35;
+}
