@@ -3,6 +3,10 @@ export default function Home() {
     return (
         <div className={"cont-main-home"}>
             <div className={"first-page-home"}>
+                <div className={"cont-item-first-page"}>
+
+                </div>
+
                 <div className={"big-apple-home"}>
                     <svg width="344" height="550" viewBox="0 0 344 550" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="8.88024" cy="271.682" rx="153.828" ry="149.303"
