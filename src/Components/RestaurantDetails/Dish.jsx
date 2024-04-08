@@ -10,7 +10,7 @@ export default function CardDish({ dishrant = [] }) {
     return (
         <div>
             <div class="menu-dish">
-                <a href="#1">Entrées</a>
+                <a href="#1" className="section-on">Entrées</a>
                 <a href="#2">Plats</a>
                 <a href="#3">Desserts</a>
                 <div class="line"></div>
@@ -85,10 +85,10 @@ export default function CardDish({ dishrant = [] }) {
             ))}
             </section>
             </div>
-            <div>
-                <button></button>
-                <button></button>
-                <button></button>
+            <div className="div-dish-button">
+                <button className="button-dish green"></button>
+                <button className="button-dish yellow"></button>
+                <button className="button-dish yellow"></button>
             </div>
         </div>
     );

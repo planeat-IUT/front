@@ -4,7 +4,7 @@
     align-content: center;
     align-items: flex-start;
     justify-content: center;
-    height: 80vh;
+    height: 75vh;
     width: -moz-fit-content;
     width: fit-content;
     /* margin-top: 10vh; */
@@ -95,10 +95,9 @@
 
 .dish-list{
     display: flex;
-    flex-wrap: wrap;
     align-content: center;
     overflow-y: auto;
-    height: 80vh;
+    height: 76vh;
     flex-direction: row;
     align-items: flex-start;
 }
@@ -173,10 +172,29 @@
     margin-top: auto;
 }
 
-.menu-dish > span {
+.menu-dish > a {
     margin-right: 10px; /* Ajoute une marge de 10 pixels à droite de chaque élément */
     font-size: 20px;
     font-family: 'Inter';
+    font-style: italic;
+    color: #534B35;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section-on{
+    font-size: 30px !important;
+    font-family: 'Inter';
+    color: #534B35;
+    font-weight: bold;
+}
+
+.line{
+    height: 1px;
+    background-color: #534B35;
+    margin-bottom: 1.5vh;
 }
 
 .note-control-card-dish textPath{
@@ -187,6 +205,29 @@
     margin-bottom: 5px;
 }
 
+.div-dish-button{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.button-dish{
+    margin-top: 1.5vh;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 7px;
+    border: none;
+}
+
+.yellow{
+    background-color: #FACE31;
+
+}
+
+.green{
+    background-color: #9CF196;
+}
 
 ::-webkit-scrollbar {
     width: 8px;
