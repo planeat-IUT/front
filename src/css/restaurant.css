@@ -4,16 +4,17 @@
     align-content: center;
     align-items: flex-start;
     justify-content: center;
-    height: fit-content;
+    height: 80vh;
+    width: -moz-fit-content;
     width: fit-content;
-    margin-top: 150px;
+    /* margin-top: 10vh; */
     margin-left: 20px;
     padding: 25px;
     background-color: #FFFEEC;
     border-radius: 5px;
 }
 
-.NamePlan-imgRestaurant{
+.NamePlan-imgdishrant{
     height: 250px;
     width: 350px;
     border-radius: 5px;
@@ -22,6 +23,7 @@
 .NamePlan-divPlan{
     font-size: 18px;
     font-family: 'Inter';
+    margin-top: 5vh;
 }
 
 .NamePlan-plan{
@@ -37,4 +39,172 @@
     background-color: white;
     border-radius: 5px;
     border-color: #534B35;
+}
+
+.resturant{
+    display: flex;
+    margin-top: 10vh;
+}
+
+.Dish{
+    margin-left: 5vw;
+    width: 70vw;
+}
+
+
+
+.cont-dishrant{
+    position: absolute;
+    top: 0;
+    padding-top: 60px;
+    height: calc(100% - 60px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: white;
+}
+
+.cont-card-dishrant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1 1;
+    overflow-y: auto;
+    margin-left: 210px;
+    margin-top: 10px;
+}
+
+.cont-card-dish{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 15px;
+    height: 190px;
+    width: 480px;
+    margin: 10px;
+    margin-bottom: 35px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cont-utils-card-dish{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.dish-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    overflow-y: auto;
+    height: 80vh;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.dish-section {
+    flex: 1 1 calc(50% - 20px); /* Calcul de la largeur des colonnes */
+    margin-bottom: 20px; /* Espacement entre les sections */
+}
+
+.img-card-dish{
+    margin-right: 15px;
+    width: 160px;
+    border-radius: 5px;
+    background: white;
+    object-fit: contain;
+}
+
+.img-card-dish img{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px 13px 3px 13px;
+    object-fit: cover;
+}
+
+
+.title-txt-card-dish{
+    margin-bottom: 5px;
+}
+
+.desc-card-dish{
+    font-size: 13px;
+    color: #534B35;
+}
+
+.txt-card-dish{
+    display: flex;
+    flex-direction: column;
+    flex : 1;
+    margin: 1px 2px;
+}
+
+.control-card-dish{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px;
+    align-items: end;
+    width: 40px;
+}
+
+.note-control-card-dish{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-control-card-dish .note{
+    position: relative;
+    z-index: 2;
+    width: 21px;
+    right: -27px;
+    display: flex;
+    justify-content: center;
+    color: #534B35;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 350;
+    top: 2px;
+}
+
+.price-card-dish{
+    margin-top: auto;
+}
+
+.menu-dish > span {
+    margin-right: 10px; /* Ajoute une marge de 10 pixels à droite de chaque élément */
+    font-size: 20px;
+    font-family: 'Inter';
+}
+
+.note-control-card-dish textPath{
+    text-anchor: middle;
+}
+
+.btn-card-dish{
+    margin-bottom: 5px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lightgrey;
+    opacity: 0.5;
+    width: 11px;
 }
