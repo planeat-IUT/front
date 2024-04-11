@@ -26,7 +26,7 @@ export default function NamePlan() {
                     <span>Plan</span>
                 </div>
                 <div className='NamePlan-plan'>
-                    <MapContainer center={[49 , 2]} zoom={15} style={{ width: '350px', height: '250px' }} zoomControl={false} scrollWheelZoom={false} ref={setMap} dragging={false}>
+                    <MapContainer center={[49 , 2]} zoom={15} style={{ width: '20vw', height: '40vh' }} zoomControl={false} scrollWheelZoom={false} ref={setMap} dragging={false}>
                         <TileLayer
                             attribution={'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
                                 '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +

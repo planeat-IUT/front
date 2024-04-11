@@ -14,26 +14,35 @@
     border-radius: 5px;
 }
 
-.NamePlan-imgdishrant{
+.NamePlan-restaurant{
     height: 250px;
-    width: 350px;
+    width: 20vw;
     border-radius: 5px;
 }
 
 .NamePlan-divPlan{
-    font-size: 18px;
+    font-size: 25px;
     font-family: 'Inter';
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
 .NamePlan-plan{
-    height: 250px;
-    width: 350px;
+
+    height: 40vh;
+    width: 20vw;
+}
+
+.NamePlan-imgRestaurant{
+    width: 20vw;
+    height: 22vh;
+    border-radius: 5px;
+
 }
 
 .NamePlan-btnPlan{
-    width: 350px;
-    height: 30px;
+    margin-top: 1vh;
+    width: 20vw;
+    height: 4vh;
     font-family: 'Inter';
     font-size: 15px;
     background-color: white;
@@ -53,7 +62,7 @@
 
 
 
-.cont-dishrant{
+.cont-Restaurant{
     position: absolute;
     top: 0;
     padding-top: 60px;
@@ -64,7 +73,7 @@
     background: white;
 }
 
-.cont-card-dishrant{
+.cont-card-Restaurant{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -76,6 +85,7 @@
 
 .cont-card-dish{
     display: flex;
+    position: relative;
     flex-direction: row;
     background: white;
     border-radius: 15px;
@@ -85,6 +95,66 @@
     margin-bottom: 35px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+.cont-card-dish::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente */
+    border-radius: 15px;
+    opacity: 0; /* Initialement transparent */
+    transition: opacity 0.3s ease;
+}
+
+.cont-card-dish:hover::before {
+    opacity: 1; /* Assombrissement complet */
+}
+
+.dish-panier-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #9CF196;
+
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Inter';
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1; /* Assurez-vous que le bouton est au-dessus de la superposition */
+    display: none; /* Masquer initialement le bouton */
+}
+
+.cont-card-dish:hover .dish-panier-button {
+    display: block; /* Afficher le bouton au survol */
+}
+
+.quantity-choice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Assurez-vous que le choix de quantité est au-dessus de la superposition */
+    display: none; /* Masquer initialement le choix de quantité */
+}
+
+.cont-card-dish:hover .quantity-choice {
+    display: block; /* Afficher le choix de quantité au survol */
+}
+
+
 
 .cont-utils-card-dish{
     display: flex;
