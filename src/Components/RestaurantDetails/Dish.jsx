@@ -1,5 +1,5 @@
 import imgsdish from '../../img/plat.jpg';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function CardDish({}) {
     // Créez une liste de 9 éléments pour la boucle
@@ -7,15 +7,37 @@ export default function CardDish({}) {
     const plat = Array.from({ length: 9 }, (_, index) => index);
     const dessert = Array.from({ length: 9 }, (_, index) => index);
     const [hoveredDish, setHoveredDish] = useState(null);
+    const [activeSection, setActiveSection] = useState('1');
 
-    const handleHover = (index) => {setHoveredDish(index);};
+    const handleHover = (index) => {
+        setHoveredDish(index);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.getElementsByClassName('dish-section');
+            const sectionArray = Array.from(sections);
+            sectionArray.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    setActiveSection(section.id);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        console.log(activeSection);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div>
             <div className="menu-dish">
-                <a href="#1" className="section-on">Entrées</a>
-                <a href="#2">Plats</a>
-                <a href="#3">Desserts</a>
+                <a href="#1" className={activeSection === "1" ? "section-on" : ""}>Entrées</a>
+                <a href="#2" className={activeSection === "2" ? "section-on" : ""}>Plats</a>
+                <a href="#3" className={activeSection === "3" ? "section-on" : ""}>Desserts</a>
                 <div className="line"></div>
             </div>
             <div className="dish-list">
@@ -50,12 +72,12 @@ export default function CardDish({}) {
             <section id='2' className="dish-section">
             {plat.map((index) => (
                 <div key={index} className={`cont-card-dish ${hoveredDish === index ? 'panier' : ''}`} onMouseEnter={() => handleHover(index)} onMouseLeave={() => handleHover(null)}>
-                    <div class="img-card-dish">
+                    <div className="img-card-dish">
                         <img src={imgsdish} alt="" />
                     </div>
-                    <div class="cont-utils-card-dish">
-                        <div class="txt-card-dish">
-                            <span class="title-txt-card-dish">
+                    <div className="cont-utils-card-dish">
+                        <div className="txt-card-dish">
+                            <span className="title-txt-card-dish">
                                 Nom plat
                             </span>
                             <span className={"desc-card-dish"}>
@@ -78,12 +100,12 @@ export default function CardDish({}) {
             <section id='3' className="dish-section">
             {dessert.map((index) => (
                 <div key={index} className={`cont-card-dish ${hoveredDish === index ? 'panier' : ''}`} onMouseEnter={() => handleHover(index)} onMouseLeave={() => handleHover(null)}>
-                    <div class="img-card-dish">
+                    <div className="img-card-dish">
                         <img src={imgsdish} alt="" />
                     </div>
-                    <div class="cont-utils-card-dish">
-                        <div class="txt-card-dish">
-                            <span class="title-txt-card-dish">
+                    <div className="cont-utils-card-dish">
+                        <div className="txt-card-dish">
+                            <span className="title-txt-card-dish">
                                 Nom déssert
                             </span>
                             <span className={"desc-card-dish"}>
