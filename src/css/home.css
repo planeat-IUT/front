@@ -1,20 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .cont-main-home{
     width: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .first-page-home{
-    height: 100vh;
+    height: calc(100vh - 10px);
+    width: 100vw;
     background: #534B35;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
+.second-page-home{
+    height: 100vh;
+    width: 100vw;
+    background: #FEFAEF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.third-page-home{
+    width: 100vw;
+    height: fit-content;
+    padding: 30vh 0 30vh 0;
+    background: #FEFAEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fourth-page-home{
+    width: 100vw;
+    height: 20vh;
+    background: #534B35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .big-apple-home{
     position: absolute;
     left: -20px;
     top: -5px;
+    z-index: 2;
 }
 
 .little-apple-home{
@@ -22,6 +60,7 @@
     width: min-content;
     position: absolute;
     right: -5px;
+    z-index: 2;
 }
 
 .little-mid-apple-home{
@@ -29,16 +68,262 @@
     width: min-content;
     position: absolute;
     bottom: -3px;
-    left: 50%;
+    z-index: 2;
+    transform: rotate(-110deg);
+    right: -130px;
+    top: calc(100vh - 40px);
 }
 
 .cont-item-first-page{
-    height: 200px;
-    width: 200px;
-    background: white;
+    height: calc(100vh - 180px);
+    width: 100%;
+    margin: 55px 80px 0 80px;
+    background: #534b35;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-item-first-page .title{
+    color: #F1F1F1;
+    font-size: 50px;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.search-bar-home input{
+    border-radius: 0 18px 18px 0;
+    border: none;
+    padding: 0 10px;
+    font-size: 20px;
+    flex: 1;
+    height: 100%;
+}
+
+.search-bar-home input:focus{
+    outline: none;
+}
+
+.search-bar-home input::placeholder{
+    font-style: italic;
+    font-size: 18px;
+}
+
+.separation-title{
+    width: 70vw;
+    border-bottom: #F1F1F1 1px solid;
+    margin-top: 20px;
+}
+
+.search-bar-home{
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    width: 40vw;
+    height: 50px;
+    margin-top: 60px;
+    background: white;
+}
+
+.search-bar-home-loupe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    border-right: #534B35 2px solid;
+}
+
+.search-bar-home-loupe svg path{
+
+}
+
+.header-second-page{
+    margin-top: 25px;
+    color: #534B35;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.items-cont-second-page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 65px;
+    justify-content: center;
+    height: fit-content;
+}
+
+.item-second-page{
+    height: 300px;
+    width: 300px;
+    background: #FEFAEF;
     border-radius: 8px;
-    opacity: 0.5;
-    margin-left: 50px;
+    margin: 0 60px 0 60px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+
+.cont-items-third-page{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    padding: 25px;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.item-third-page{
+    height: 220px;
+    width: 320px;
+    border-radius: 28px 8px 28px 8px;
+    margin: 30px 60px 30px 60px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+
+.item-third-page img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 28px 8px 28px 8px;
+}
+
+.resto-name-home {
+    position: absolute;
+    z-index: 2;
+    margin-top: 150px;
+    padding: 15px;
+    color: #F1F1F1;
+    font-size: 18px;
+    max-width: 290px;
+    min-width: 290px;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    border-radius: 0 0 28px 8px;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+.item-second-page svg{
+    margin-bottom: 60px;
+}
+
+.item-second-page span{
+    color: #534B35;
+    text-align: center;
+}
+
+.item-second-page-highlight{
+    scale: 1.1;
+}
+
+.item-second-page-shadow{
+    scale: 0.9;
+    filter: blur(5px);
+}
+
+.transition-inter-page{
+    position: absolute;
+    bottom: -60px;
+}
+
+.transition-inter-page svg{
+    width: 100vw;
+    left: 0;
+}
+
+.active-item-third-page{
+    background-color: #9CF196;
+}
+
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.cont-card-third-page-actif{
+    background-color: rgba(83, 75, 53, 0.8);
+    z-index: 2;
+    border-radius: 28px 8px 28px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 320px;
+    height: 220px;
+    font-size: 17px;
+}
+
+.btn-card-third-page{
+    margin-top: 30px;
+}
+
+.btn-card-third-page a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: #F1F1F1 1px solid;
+    transition: linear 0.2s;
+    font-size: 15px;
+}
+
+.btn-card-third-page a:hover{
+    color: #9CF196;
+    border-bottom: #9CF196 1px solid;
+}
+.header-card-third-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-card-third-page span{
+    margin-bottom: 10px;
+}
+
+.fourth-page-home .transition-inter-page{
+    position: relative;
+    transform: rotate(180deg);
+    z-index: 2;
+    top: -140px;
+}
+
+.big-apple-footer{
+    position: absolute;
+    z-index: 2;
+    right: -20px;
+    bottom: calc(-223vh - 2px);
+    height: 437px;
 }
