@@ -1,0 +1,331 @@
+.NamePlan{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    height: 75vh;
+    width: -moz-fit-content;
+    width: fit-content;
+    /* margin-top: 10vh; */
+    margin-left: 20px;
+    padding: 25px;
+    background-color: #FFFEEC;
+    border-radius: 5px;
+}
+
+.NamePlan-restaurant{
+    height: 250px;
+    width: 20vw;
+    border-radius: 5px;
+}
+
+.NamePlan-divPlan{
+    font-size: 25px;
+    font-family: 'Inter';
+    margin-top: 2vh;
+}
+
+.NamePlan-plan{
+
+    height: 40vh;
+    width: 20vw;
+}
+
+.NamePlan-imgRestaurant{
+    width: 20vw;
+    height: 22vh;
+    border-radius: 5px;
+
+}
+
+.NamePlan-btnPlan{
+    margin-top: 1vh;
+    width: 20vw;
+    height: 4vh;
+    font-family: 'Inter';
+    font-size: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #534B35;
+}
+
+.resturant{
+    display: flex;
+    margin-top: 10vh;
+}
+
+.Dish{
+    margin-left: 5vw;
+    width: 70vw;
+}
+
+
+
+.cont-Restaurant{
+    position: absolute;
+    top: 0;
+    padding-top: 60px;
+    height: calc(100% - 60px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: white;
+}
+
+.cont-card-Restaurant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1 1;
+    overflow-y: auto;
+    margin-left: 210px;
+    margin-top: 10px;
+}
+
+.cont-card-dish{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background: white;
+    border-radius: 15px;
+    height: 190px;
+    width: 480px;
+    margin: 15px 4.5vw;
+    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cont-card-dish::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente */
+    border-radius: 15px;
+    opacity: 0; /* Initialement transparent */
+    transition: opacity 0.3s ease;
+}
+
+.cont-card-dish:hover::before {
+    opacity: 1; /* Assombrissement complet */
+}
+
+.dish-panier-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #9CF196;
+
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Inter';
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1; /* Assurez-vous que le bouton est au-dessus de la superposition */
+    display: none; /* Masquer initialement le bouton */
+}
+
+.dish-div-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.cont-card-dish:hover .dish-panier-button {
+    display: block; /* Afficher le bouton au survol */
+}
+
+.quantity-choice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Assurez-vous que le choix de quantité est au-dessus de la superposition */
+    display: none; /* Masquer initialement le choix de quantité */
+}
+
+.cont-card-dish:hover .quantity-choice {
+    display: block; /* Afficher le choix de quantité au survol */
+}
+
+
+
+.cont-utils-card-dish{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.dish-list{
+    display: flex;
+    overflow-y: auto;
+    height: 76vh;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img-card-dish{
+    margin-right: 15px;
+    width: 160px;
+    border-radius: 5px;
+    background: white;
+    object-fit: contain;
+}
+
+.img-card-dish img{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px 13px 3px 13px;
+    object-fit: cover;
+}
+
+
+.title-txt-card-dish{
+    margin-bottom: 5px;
+}
+
+.desc-card-dish{
+    font-size: 13px;
+    color: #534B35;
+}
+
+.txt-card-dish{
+    display: flex;
+    flex-direction: column;
+    flex : 1;
+    margin: 1px 2px;
+}
+
+.control-card-dish{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px;
+    align-items: end;
+    width: 40px;
+}
+
+.note-control-card-dish{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-control-card-dish .note{
+    position: relative;
+    z-index: 2;
+    width: 21px;
+    right: -27px;
+    display: flex;
+    justify-content: center;
+    color: #534B35;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 350;
+    top: 2px;
+}
+
+.price-card-dish{
+    margin-top: auto;
+}
+
+.menu-dish > a {
+    margin-right: 40px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: italic;
+    color: #534B35;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section-on{
+    font-size: 30px !important;
+    font-family: 'Inter';
+    color: #534B35;
+    font-weight: bold;
+}
+
+.line{
+    height: 1px;
+    background-color: #534B35;
+    margin-bottom: 1.5vh;
+}
+
+.line-section{
+    height: 1px;
+    background-color: #534B35;
+    margin: 50px auto;
+    width: 75%;
+}
+
+.note-control-card-dish textPath{
+    text-anchor: middle;
+}
+
+.btn-card-dish{
+    margin-bottom: 5px;
+}
+
+.div-dish-button{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.button-dish{
+    margin-top: 1.5vh;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 7px;
+    border: none;
+}
+
+.yellow{
+    background-color: #FACE31;
+
+}
+
+.green{
+    background-color: #9CF196;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lightgrey;
+    opacity: 0.5;
+    width: 11px;
+}
