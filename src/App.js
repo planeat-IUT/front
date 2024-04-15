@@ -7,6 +7,7 @@ import './css/plan.css';
 import './css/map.css';
 import './css/home.css';
 import './css/load.css';
+import './css/reservation.css';
 import Home from './Page/Home';
 import Plan from './Page/Plan';
 import Restaurants from './Page/Restaurants';
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
   {
     path: "/Réservation/*",
     element: <Reservation />,
-  }
+  },
   ]);
 
 

@@ -1,0 +1,187 @@
+.reserv-parent{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserv-cont-main{
+    margin-top: 55px;
+    padding: 30px 30px 5px 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserv-title
+{
+    font-size: 19px;
+    color: #534B35;
+}
+
+.reserv-cont-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+    width: 100%;
+    margin: 20px 0;
+    border: #534B35 1px solid;
+    border-radius: 10px;
+}
+
+.react-calendar{
+    border: none !important;
+    margin-bottom: 20px;
+}
+
+.reserv-control-activ{
+    background: #534B35;
+    height: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px 35px 35px 10px;
+}
+
+.reserv-control-activ svg path{
+    fill: white;
+}
+
+.reserv-header-control{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.react-calendar__navigation__label{
+    color: #534B35;
+    font-size: 16px;
+}
+
+.reserv-btn-next{
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.reserv-btn-next span{
+    border-bottom: #534B35 1px solid;
+    padding: 3px;
+    cursor: pointer;
+    color: #534B35;
+    font-size: 16px;
+}
+
+.reserv-cont-choices{
+    height: 280px;
+    width: 350px;
+}
+
+.reserv-cont-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.reserv-item-people{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    border: #534B35 1px solid;
+    border-radius: 5px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.reserv-item-people span{
+    font-size: 16px;
+    color: #534B35;
+}
+
+.reserv-cont-people{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.active-people{
+    border: #9CF196 1px solid;
+    color: #9CF196;
+}
+
+.active-people span{
+    color: #9CF196;
+}
+
+.active-people svg path{
+    fill: #9CF196;
+}
+
+.react-calendar__tile--active{
+    background: #9CF196 !important;
+    color: white !important;
+}
+
+.close-card svg{
+    margin: 0 !important;
+}
+
+.close-card{
+    border-radius: 50%;
+    background: white;
+    padding: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-card:hover{
+    background: #F2F2F2;
+}
+
+.reserv-cont-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.reserv-item-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: #534B35 1px solid;
+    border-radius: 5px;
+    height: fit-content;
+    margin: 7px;
+    cursor: pointer;
+}
+
+.reserv-item-time span{
+    color: #534B35;
+}

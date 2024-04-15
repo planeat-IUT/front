@@ -1,4 +1,5 @@
 import NamePlan from "../Components/RestaurantDetails/NamePlan";
+import Reservation from "../Components/RestaurantComponents/ReservationComponent"
 import Dish from "../Components/RestaurantDetails/Dish";
 import {useState} from "react";
 
@@ -13,6 +14,5 @@ export default function Restaurant() {
                 <Dish />
             </div>
         </div>
-
     );
 }
