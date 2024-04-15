@@ -2,6 +2,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './App.css';
 import './css/header.css';
 import './css/restaurants.css';
+import './css/restaurant.css';
 import './css/plan.css';
 import './css/map.css';
 import './css/home.css';
@@ -9,6 +10,7 @@ import './css/load.css';
 import Home from './Page/Home';
 import Plan from './Page/Plan';
 import Restaurants from './Page/Restaurants';
+import Restaurant from './Page/Restaurant';
 import About from './Page/About';
 import Login from './Page/Login';
 import Account from './Page/Account';
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/restaurants",
     element: <Restaurants />,
+  },
+  {
+    path: "/restaurant",
+    element: <Restaurant />,
   },
   {
     path: "/about",
