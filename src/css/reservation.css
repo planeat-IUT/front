@@ -157,7 +157,31 @@
 }
 
 .close-card:hover{
-
     background: #F2F2F2;
+}
 
+.reserv-cont-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.reserv-item-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: #534B35 1px solid;
+    border-radius: 5px;
+    height: fit-content;
+    margin: 7px;
+    cursor: pointer;
+}
+
+.reserv-item-time span{
+    color: #534B35;
 }

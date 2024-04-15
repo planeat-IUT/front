@@ -6,6 +6,19 @@ export default function ReservationComponent() {
 
     const [value, onChange] = useState(new Date());
     const [active, setActive] = useState(0);
+    const [timeSlots, setTimeSlots] = useState([]);
+
+    // Génération des tranches horaires
+    useState(() => {
+        const slots = [];
+        for (let hour = 19; hour <= 22; hour++) {
+            for (let minute = 0; minute < 60; minute += 30) {
+                const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                slots.push(<div key={time}>{time}</div>);
+            }
+        }
+        setTimeSlots(slots);
+    }, []);
 
     function NextClicked(){
         console.log(active);
@@ -25,6 +38,10 @@ export default function ReservationComponent() {
         console.log(id);
         var people = document.getElementById(id);
         people.classList.add("active-people");
+    }
+
+    function handleTimeSlotClick(timeSlot) {
+        console.log(timeSlot);
     }
 
     return(
@@ -92,10 +109,14 @@ export default function ReservationComponent() {
             )}
 
             {active === 2 && (
-                <div className={"reserv-cont-time"} onClick={() => setActive(0)}>
-                    <span>
-                        Heure
-                    </span>
+                <div className={"reserv-cont-time"}>
+                    {timeSlots.map((timeSlot) => (
+                            <div key={timeSlot.key} className={"reserv-item-time"} onClick={() => handleTimeSlotClick(timeSlot)}>
+                                <span>
+                                    {timeSlot}
+                                </span>
+                            </div>
+                        ))}
                 </div>
             )}
             {active === 1 && (
@@ -124,9 +145,14 @@ export default function ReservationComponent() {
                 </span>
                 </div>
             )}
-
+            {active === 2 && (
+                <div className={"reserv-btn-next"} onClick={() => NextClicked()}>
+                <span>
+                    Valider
+                </span>
+                </div>
+            )}
         </div>
-
     </div>
     );
 }
